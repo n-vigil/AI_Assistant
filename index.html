@@ -10,28 +10,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
-    <div class="chatbot">
-        <header> <h2>Chatbot</h2> </header>
-        <!-- Chatbot Log -->
-        <ul class="chatbot-log">
-            <!-- Intro text by Chatbot -->
-            <li class="chat-intro">
-                <span class="material-symbols-outlined">smart_toy</span>
-                <p> Hello! <br>How can I help you? </p>
-            </li>
-            <!-- Text outputed by Chatbot -->
-            <li class="chat-output"> 
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                
-            </li>
-        </ul> 
-        <!-- Text inputed by Users -->
-        <div class="chat-input">
-            <input placeholder="Type a message..."></input>
-            <span id="send-btn" class="material-symbols-outlined">send</span>
+
+    <nav id="desktop-nav">
+        <div class="logo">Community Resources </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projets">ChatBot</a></li>
+                <li><a href="#resoures">Resources</a></li>
+            </ul>
         </div>
-    </div>
-    </div>
-    <script src="script.js"></script>
+    </nav>
+
+    <!-- Landing section -->
+    <section id="landing">
+        <div class="section__pic-container">
+            <img src="./assets/first-pic.png" alt="Social Good Overview Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, this</p>
+            <h1 class="title">is a social good app</h1>
+            <p class="section__text__p2">Food and Volunteer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./#about')">Learn More</button>
+                <button class="btn btn-color-1" onclick="location.href= './#chatbot-section'">ChatBot</button>
+            </div>
+        </div>
+        <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#about'"
+         />
+    </section>
+
+    <!-- About Section -->
+    <section id = "about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About</h1>
+        
+        <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#resources'"
+         />
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <h1 class="title">Resources</h1>
+
+        <!-- <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#chatbot-section'"
+         /> -->
+    </section>
+
+    <!-- Chatbot Section -->
+    <!-- <section id = "chatbot-section">
+        <div class="chatbot">
+            <header> <h2>Chatbot</h2> </header>
+            Chatbot Log
+            <ul class="chatbot-log">
+                Intro text by Chatbot
+                <li class="chat-intro">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p> Hello! <br>How can I help you? </p>
+                </li>
+                Text outputed by Chatbot
+                <li class="chat-output"> 
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    
+                </li>
+            </ul> 
+            Text inputed by Users
+            <div class="chat-input">
+                <input placeholder="Type a message..."></input>
+                <span id="send-btn" class="material-symbols-outlined">send</span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="script.js"></script> -->
+    
 </body>
 </html>
