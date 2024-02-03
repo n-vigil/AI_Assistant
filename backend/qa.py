@@ -7,3 +7,7 @@ llm = OpenAI(openai_api_key = OPEN_API_KEY)
 @domain = nancy-v@kintone.com
 @appId = 3
 @apiToken = ybpuAL6wTujk1lczjWu8Q1ojLlxQAWMdvet7Sjyi
+
+### GET
+GET https://{{domain}}/k/v1.records.json?app={{appId}}
+X-Cybozu-API-Token: {{apiToken}}
