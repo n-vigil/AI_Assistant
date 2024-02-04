@@ -71,6 +71,26 @@ section{
     display: flex;
 }
 
+/* Resources */
+.volunteer-menu, .food-menu{
+    width: 400px;
+    height: 300px;
+    border:1px solid black;
+    border-radius:50px; 
+}
+
+#resources-container{
+    display: inline-flex;
+}
+
+#food, #volunteer{
+    padding: 50px;
+}
+#food h4, #volunteer h4{
+    font-size: 20px;
+    text-align: center;
+}
+
 /* landing page */
 #landing{
     display: flex;
@@ -159,6 +179,9 @@ section{
     position:relative;
  }
 
+ #about h3{
+    padding-top: 50px;
+ }
  /* icon */
 
 .icon{
