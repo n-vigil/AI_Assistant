@@ -1,5 +1,6 @@
 # open ai
-Authorization: Bearer "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"
+OpenAI-Beta: assistants=v1
+Authorization: Bearer "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"
 
 # kintone REST API requests
 @domain = nancy-v@kintone.com
