@@ -88,6 +88,9 @@ section{
     display: inline-flex;
 }
 
+#resources{
+    color: white;
+}
 #food, #volunteer{
     padding: 50px;
 }
@@ -226,15 +229,23 @@ li{
     list-style: none;
 }
 
+#chatbot-section{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 7rem;
+}
+
 .chatbot{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    align-self: center;
     width: 420px;
     overflow: hidden;
     background: white;
-    border-radius: 15px;
+    border-radius: 2rem;
 }
 
 .chatbot header{
