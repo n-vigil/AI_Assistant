@@ -1,62 +1,31 @@
-OPEN_API_KEY = "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"
-
-# import the OpenAI Python library for calling the OpenAI API
-from openai import OpenAI
-import os
-
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", OPEN_API_KEY))
-
-# from openai import OPENAI
-# from langchain_openai import OpenAI
-# import langchain
-# import langchain_community
-# from langchain_community.llms import OpenAI
-# llm = OpenAI(openai_api_key = OPEN_API_KEY)
-MODEL = "gpt-3.5-turbo"
-assistant = client.beta.assistants.create(
-    name="Math Tutor",
-    instructions="You are a personal math tutor. Write and run code to answer math questions.",
-    tools=[{"type": "code_interpreter"}],
-    model= MODEL
-)
-
-# step 2: create a thread
-thread = client.beta.threads.create()
-
-# step 3: add a message to a thread
-message = client.beta.threads.messages.create(
-    thread_id=thread.id,
-    role="user",
-    content="I need to solve the equation `3x + 11 = 14`. Can you help me?"
-)
-# step 4: create a run
-run = client.beta.threads.runs.retrieve(
-  thread_id=thread.id,
-  run_id=run.id
-)
+import openai
 
 
+def run_script():
+    OPENAI_API_KEY = "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"
+    openai.api_key = OPENAI_API_KEY
 
-# first_question = True
-# while True:
-#     if first_question:
-#         intro_text = input("\nEnter your question or type 'quit' to exit!\n")
-#         first_question = False
-#     else:
-#         intro_text = input("\n Any more questions?\n")
+    first_question = True
+    while True:
+        if first_question:
+            intro_text = input("\nEnter your question or type 'quit' to exit!\n")
+            first_question = False
+        else:
+            intro_text = input("\n Any more questions?(Type 'quit' to exit)\n")
 
-#     if intro_text.lower == "quit":
-#         break
+        if intro_text.lower() == "quit":
+            break
 
-#     print("QUESTION: \"%s\"" % intro_text)
-#     answer = 3
+    # Use the OpenAI API to generate a response with the chat model
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo-16k",
+            messages=[
+                {"role": "system", "content": "You serve as a helpful assistant, specializing in providing users with information on volunteering opportunities and food banks. Users can inquire about available volunteering positions, receive details on specific organizations, and obtain contact information. Similarly, the chatbot assists in locating nearby food banks, offering addresses and contact details. It also gives government resources to assist in food insecurity. To maintain focus, if users pose unrelated questions, the chatbot gently redirects them to its primary role of providing valuable information about volunteering opportunities and food banks. This ensures a seamless and efficient user experience centered around community engagement and assistance.  A question with no location will be followed up by the question 'What is the location that you are searching for resources' The user may answer with an address, city, or zip code."},
+                {"role": "user", "content": intro_text}
+            ]
+        )
 
-#     def get_completion(prompt, model="gpt-3.5-turbo"):
-#         messages = [{"role": "user", "content": prompt}]
-#         response = openai.ChatCompletion.create(
-#         model=model,
-#         messages=messages,
-#         temperature=0, # this is the degree of randomness of the model's output
-#     )
-#         quitreturn response.choices[0].message["content"]
-#     print(answer)
+        # Get the generated answer from the API response
+        answer = response['choices'][0]['message']['content'].strip()
+
+        print("ANSWER: \"%s\"\n" % answer)

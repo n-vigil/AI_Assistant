@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+</head>
+<body>
+
+    <nav id="desktop-nav">
+        <div class="logo">Empower </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projets">ChatBot</a></li>
+                <li><a href="#resoures">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Landing section -->
+    <section id="landing">
+        <div class="section__pic-container">
+            <img id="first-pic" src="./assets/first-pic.png" alt="Social Good Overview Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Empowering Communities</p>
+            <h1 class="title">Your Gateway to Food Resources and Volunteering Opportunities</h1>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./#about')">Learn More</button>
+                <button class="btn btn-color-1" onclick="location.href= './#chatbot-section'">ChatBot</button>
+                <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#about'"
+         />
+            </div>   
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id = "about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About</h1>
+        <h3>
+            Introducing "Empowering Communities," an innovative application designed to seamlessly connect individuals 
+            with meaningful volunteer opportunities and nearby food banks. This user-friendly platform utilizes 
+            chatbot technology to match users with local initiatives, making it effortless for them to contribute 
+            to their community. Whether you're passionate about serving others or looking to combat food insecurity, 
+            Empowering Communities is your go-to resource, fostering a sense of unity and empowerment within neighborhoods.
+        </h3>
+        
+        <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#resources'"
+         />
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <h1 class="title">Resources</h1>
+        <div id="resources-container">
+            <!--Volunteering Section-->
+            <div id="volunteer">
+                    <a href="" ><img class="volunteer-menu" src="./assets/volunteer_image.jpg" alt="volunteer"></a>
+                    <h4>Volunteer Opportunities Near You</h4>
+            </div>
+            <!--Foodbank Section-->
+            <div id="food" >
+                    <a href=""><img class="food-menu" src="./assets/foodbank_image.jpg" alt=""></a>
+                    <h4>Food Banks Near You</h4>
+            </div>
+        </div>
+        
+
+        <!-- <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#chatbot-section'"
+         /> -->
+    </section>
+
+    <!-- Chatbot Section -->
+    <section id = "chatbot-section">
+        <div class="chatbot">
+            <header> <h2>Chatbot</h2> </header>
+            <!-- Chatbot Log -->
+            <ul class="chatbot-log">
+                <!-- Intro text by Chatbot -->
+                <li class="chat-intro">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p> Hello! <br>How can I help you? </p>
+                </li>
+                <!-- Text outputed by Chatbot -->
+                <!-- <li class="chat-output"> 
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    
+                </li> -->
+            </ul> 
+            <!-- Text inputed by Users -->
+            <div class="chat-input">
+                <input placeholder="Type a message..."></input>
+                <span id="send-btn" class="material-symbols-outlined">send</span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="script.js"></script> 
+    
+    
+</body>
+</html>
