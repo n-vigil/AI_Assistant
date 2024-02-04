@@ -5,7 +5,8 @@ Authorization: Bearer "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"
 @domain = nancy-v@kintone.com
 @appId = 3
 @apiToken = ybpuAL6wTujk1lczjWu8Q1ojLlxQAWMdvet7Sjyi
+@recordId = 8
 
 ### GET
-GET https://{{domain}}/k/v1.records.json?app={{appId}}
+GET https://{{domain}}/k/v1.record.json?app={{appId}}&id={{recordId}}
 X-Cybozu-API-Token: {{apiToken}}
