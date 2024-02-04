@@ -273,7 +273,7 @@ li{
 
 }
 
-.chatbot .chatbot-log .chat-output{
+.chatbot .chatbot-log .output {
     justify-content: flex-end;
 }
 
