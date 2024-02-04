@@ -6,7 +6,7 @@ import openai
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 
 
