@@ -1,9 +1,10 @@
 OPEN_API_KEY = "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"
-
+# from openai import OPENAI
+from langchain_openai import OpenAI
 import langchain
-import langchain_community
-from langchain_community.llms import OpenAI
-llm = OpenAI(openai_api_key = OPEN_API_KEY)
+# import langchain_community
+# from langchain_community.llms import OpenAI
+# llm = OpenAI(openai_api_key = OPEN_API_KEY)
 
 first_question = True
 while True:
@@ -17,3 +18,5 @@ while True:
         break
 
     print("QUESTION: \"%s\"" % intro_text)
+    answer = 3
+    print(answer)
