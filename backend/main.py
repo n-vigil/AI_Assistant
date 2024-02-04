@@ -1,18 +1,24 @@
 print("hello world!")
-from flask import Flask
-from flask_cors import CORS
+from flask import Flask, request, jsonify
 import os
+import openai
+from openai import OpenAI
+from utils import create_assistant
+from flask_cors import CORS, cross_origin
+from backend/qa.py import run_script
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+
+client = OpenAI(api_key = "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")
 
 @app.route('/')
-def index():
-  return 'Hello World'
+return 'Hello World'
 
-@app.route('/bot')
-def test():
-    return "Cash Money"
+@app.route('/bot', methods = [GET, POST])
+run_script()
+  
+
+
 
 
 if __name__ == '__main__':
