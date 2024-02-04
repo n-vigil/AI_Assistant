@@ -1,6 +1,6 @@
 # Black Wings Hackathon AI_Assistant
 
-# DEMO Video with AUDIO 
+# Presentation Video with AUDIO 
 https://media.oregonstate.edu/media/t/1_0e9cpfap
 
 
