@@ -7,15 +7,14 @@ let userMessage;
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", className);
-    console.log("chat", className)
     let chatContent = className == "output" ? `<p>${message}</p>`: `<span class="material-symbols-outlined">smart_toy</span> <p>${message}</p>`;
     chatLi.innerHTML = chatContent;
     return chatLi
 }
 
 const generateResponse = async (incomingChatLi) => {
+    // turn the thinking.. into p element
     const messageElement = incomingChatLi.querySelector("p");
-    console.log(messageElement)
     try {
         const response = await fetch('http://127.0.0.1:8080/bot', {
             method: 'GET',
@@ -27,7 +26,7 @@ const generateResponse = async (incomingChatLi) => {
 
         const responseData = await response.text();
         console.log(responseData);
-        chatbox.appendChild(createChatLi(responseData.message, "intro"));
+        chatbox.appendChild(createChatLi(responseData, "intro"));
     } catch (error) {
         console.error('Error:', error);
     }
@@ -35,7 +34,6 @@ const generateResponse = async (incomingChatLi) => {
 
 const handleChat = () => {
     userMessage = chatInput.value.trim();
-    console.log(userMessage);
     
     if(!userMessage) return;
     // create chat List Item (users message) and append to chatbox
