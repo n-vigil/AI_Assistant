@@ -7,7 +7,8 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    background: lightpink;
+    background: url('assets/Home.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 html{
@@ -40,9 +41,9 @@ nav{
 }
 
 a{
-    color: black;
+    color: white;
     text-decoration: none;
-    text-decoration-color: white;
+    text-decoration-color: gainsboro;
 
 }
 
@@ -56,34 +57,68 @@ a:hover{
 
 .logo{
     font-size: 2rem;
+    color: antiquewhite;
 }
 
 /* sections */
 section{
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
+    /* padding-top: 4vh; */
+    max-height: 90vh;
+    margin: 3rem 10rem;
     box-sizing: border-box;
     min-height: fit-content;
+
 }
 
 .section-container{
     display: flex;
+    width: 100%;
+    max-width: 1200px;
 }
+
+/* Resources */
+.volunteer-menu, .food-menu{
+    width: 400px;
+    height: 300px;
+    border:1px solid black;
+    border-radius:50px; 
+}
+
+#resources-container{
+    display: inline-flex;
+}
+
+#food, #volunteer{
+    padding: 50px;
+}
+#food h4, #volunteer h4{
+    font-size: 20px;
+    text-align: center;
+}
+
 
 /* landing page */
 #landing{
     display: flex;
     justify-content: center;
-    gap: 15rem;
+    gap: 8rem;
     height:80vh;
 }
 
 .section__pic-container{
+    /* width: 100%; */
     display: flex;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 200px;
     margin:auto 0;
+}
+
+#first-pic {
+    
+    min-width: 100%;
+    height: auto;
+    border-radius: 10rem;
+    
 }
 
 .section__text{
@@ -92,21 +127,25 @@ section{
 }
 
 .section__text p {
-    font-weight: 600;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: whitesmoke;
 }
 
 .section__text__p1 {
     text-align: center;
+    padding-bottom: 2rem;
 }
-
+/* not using */
 .section__text__p2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
 }
 
 .title{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
+    color: antiquewhite;
 }
 
 /* buttons */
@@ -122,10 +161,12 @@ section{
     padding:1rem;
     width:8rem;
     border-radius: 2rem;
+    color: aliceblue;
+    height: 4rem;
 }
 
 .btn-color-1, btn-color-2 {
-    border: rgb(53,53,53) 0.1rem solid;
+    border: rgb(48, 0, 70) 0.1rem solid;
 }
 
 .btn-color-1:hover, btn-color-2:hover {
@@ -133,7 +174,7 @@ section{
 }
 
 .btn-color-1, btn-color-2:hover {
-    background: rgb(53,53,53);
+    background: rgb(150, 25, 163);
     color:white;
 }
 
@@ -150,6 +191,7 @@ section{
 }
 
 .btn-container{
+    padding-top: 3rem;
     gap:1rem;
 }
 
@@ -157,9 +199,18 @@ section{
 
 #about {
     position:relative;
+    padding:15px 0px;
+    margin-bottom: 7rem;
  }
 
  /* icon */
+ #about h3{
+    color: antiquewhite;
+    padding-top: 50px;
+ }
+
+
+
 
 .icon{
     cursor:pointer;
@@ -168,7 +219,8 @@ section{
 
  .arrow {
     /* max-width: 5%; */
-    position:absolute;
+    position:relative ;
+    padding-top: 4rem;
     right:-5rem;
     bottom:2.5rem;
  }
