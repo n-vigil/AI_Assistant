@@ -7,8 +7,9 @@ from flask_cors import CORS, cross_origin
 import qa
 
 app = Flask(__name__)
+CORS(app)
 
-client = OpenAI(api_key = "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")
+client = OpenAI()
 
 @app.route('/')
 def index():
